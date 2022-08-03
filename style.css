@@ -1,0 +1,41 @@
+.square{
+  width: 80px;
+  height: 80px;
+  margin: 30px auto;
+  background-color: #28B463 ;
+
+animation-name: spin;
+/*название анимации*/
+/*animation-duration: 3s;*/
+/*длительность одного цикла анимации*/
+/*animation-timing-function: ease-in-out;*/
+/*скорость в начале и конце анимации*/
+/*animation-delay: 1s;*/
+/* задержка перед началом анимации*/
+/*animation-iteration-count: infinite;*/
+/*количество циклов анимации*/
+/*animation-direction: alternate;*/
+/*направление анимации (normal,reverse,alternatove)*/
+
+animation: spin 3s cubic-bezier(0.995, 0.080, 0.680, 1.010)  infinite alternate;
+/*так можно записать кратко. cunic-bezier- это ускорение из генератора в интернете*/
+}
+.square:hover{
+  animation-play-state:paused;
+}
+/*при наведении анимация прекращается*/
+
+@keyframes spin {
+  from{
+    transform:rotate(0deg);
+    33%{
+      background-color:#D4AC0D;
+    }
+  }
+  66%{
+    background-color:#D68910;
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
